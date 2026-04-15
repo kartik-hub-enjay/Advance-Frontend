@@ -1,0 +1,25 @@
+-> Animation : 
+.) The programmed movement or state changes of elements like text, images, and UI components to improve user experience. 
+.) Or we can say that whatever intrection or movement we see on the website are animation (making a still object move) .
+.) It follows a basic principle of moving a object from its initial postion to fianl position or vice versa.
+
+-> GSAp :
+.) GSAP is a javascript based animation library , which makes implementation of animation easier in frontend ui development.
+.) we have to GSAP funtions "to" , "from".
+.) to : when we want to animate the element from its initial position to final position. eg in the file
+.) from : when we want to animate the element from its final position to initial position. eg in the file
+
+> Syntax of GSAP : gsap.to("Name of the element",{
+    // code we want to execute
+})
+
+> Some GSAP properties:
+.) "stagger": when we have same elements to animate like (3 h1) but we dont want them to animate all together in a group , then we use stagger . what it do is that it animate each element with given property one by one . and the other element in the queue will animate after the duration defined in stagger . as shown in eg.
+
+.)"repeat": when we want the same elemnt to repeat again and again . repeat: times to repeat (-1 for infinite).
+
+.)"yoyo": we use yoyo with repeat if want to do element like (yoyo initial to final and then final to initial) . yoyo:true/false . see eg.
+
+>GSAP Timeline:
+
+.) we use gsap timeline to make our elemnts animation syncronus , one element animate after another. see eg. 
