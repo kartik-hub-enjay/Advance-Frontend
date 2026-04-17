@@ -3,7 +3,7 @@
 .) Or we can say that whatever intrection or movement we see on the website are animation (making a still object move) .
 .) It follows a basic principle of moving a object from its initial postion to fianl position or vice versa.
 
--> GSAp :
+-> GSAP :
 .) GSAP is a javascript based animation library , which makes implementation of animation easier in frontend ui development.
 .) we have to GSAP funtions "to" , "from".
 .) to : when we want to animate the element from its initial position to final position. eg in the file
@@ -23,3 +23,38 @@
 >GSAP Timeline:
 
 .) we use gsap timeline to make our elemnts animation syncronus , one element animate after another. see eg. 
+
+-> GSAP scrollTrigger:
+
+.)GSAP scrollTrigger is a GSAP plug in which provides us on scroll animations , like if we want to animate our element when user scrolls the page then we use this , we can trigger animation on certain scroll conditions . see eg.
+
+> scrollTrigger Properties :
+
+.) "markers" : markers provides us the scroller-start and end and the elemnt animation start and end (like when animation will be triggered) , so when the scroller start meets the element animation start then animation is triggered. see in eg.
+
+.) "scrub" : scrub means the animation moves with the scroll instead of playing on its own.
+     - if scrub: true, the animation follows your scroll position exactly.
+     - if scrub: 1 or scrub: 2, the animation follows the scroll with a small delay, so it feels smoother.
+
+.) "pin" : pin means the element stays fixed on the screen for a while while the page keeps scrolling.
+     - it is useful when you want one section to stay in view during the animation.
+
+> Simple example:
+
+gsap.to(".box", {
+    x: 500,
+    scrollTrigger: {
+        trigger: ".box",
+        scroller: "body",
+        start: "top 60%",
+        end: "top 20%",
+        scrub: true,
+        pin: true,
+        markers: true
+    }
+})
+
+> In this example:
+.) scrub: true means the box moves only when you scroll.
+.) pin: true means the box stays fixed on the screen during that scroll part.
+.) markers: true helps you see where the animation starts and ends.
