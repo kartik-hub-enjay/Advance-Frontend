@@ -1,5 +1,6 @@
 var main = document.querySelector("#main")
 var cursor = document.querySelector("#cursor")
+var imageDiv = document.querySelector("#image")
 
 main.addEventListener("mousemove",function(dets){
     gsap.to(cursor,{
@@ -7,5 +8,20 @@ main.addEventListener("mousemove",function(dets){
         y:dets.y,
         duration:1,
         ease:"back.out"
+    })
+})
+
+
+imageDiv.addEventListener("mouseenter",function(dets){
+    cursor.innerHTML = "View More"
+    gsap.to(cursor,{
+        scale:4,
+    })
+})
+imageDiv.addEventListener("mouseleave",function(dets){
+    cursor.innerHTML = ""
+    gsap.to(cursor,{
+        scale:1,
+        backgroundColour:"#ffffff"
     })
 })
