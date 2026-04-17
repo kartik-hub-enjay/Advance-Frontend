@@ -9,3 +9,12 @@ html,body{
     width: 100%;
     
 }
+
+body{
+    background-color: black;
+}
+
+#string{
+    height: 200px;
+    width: 100%;
+}
