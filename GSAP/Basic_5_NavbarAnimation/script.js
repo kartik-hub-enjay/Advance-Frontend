@@ -1,0 +1,28 @@
+var menu = document.querySelector("#nav i")
+var cross = document.querySelector("#full i")
+
+var tl = gsap.timeline()
+
+tl.to("#full",{
+    right:0,
+    duration:0.25
+})
+
+tl.from("#full h4",{
+    x:150, // from kehta h ke 150 pai jana phir wapas jana or waps jaaha se gaye the waha ana
+    duration:0.4,
+    stagger:0.2,
+    opacity:0
+})
+tl.from("#full i",{
+    opacity:0
+})
+
+tl.pause() // we can control timeline with pause , reverse , play
+
+menu.addEventListener("click",function(){
+    tl.play()
+})
+cross.addEventListener("click",function(){
+    tl.reverse()
+})
