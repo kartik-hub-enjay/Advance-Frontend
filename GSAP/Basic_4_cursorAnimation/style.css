@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    
+}
+
+body{
+    background-color: black;
+}
+#main{
+    width: 100vw;
+    height: 100vw;
+    background-color: black;
+}
+#cursor{
+    height: 2vw;
+    width: 2vw;
+    border-radius: 100%;
+    background-color: white;
+    position: fixed;
+}

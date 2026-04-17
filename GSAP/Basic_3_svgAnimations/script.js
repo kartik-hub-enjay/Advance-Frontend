@@ -22,3 +22,5 @@ string.addEventListener("mouseleave",function(dets){
         ease:"elastic.out(1,0.2)"
     })
 })
+
+// Brandium : insperation website
