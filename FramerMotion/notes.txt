@@ -23,5 +23,14 @@
 
  -> to intall framer-motion : "npm i motion"
  -> import {motion} from "motion/React"
- 
 
+
+// left to learn in framer motion :
+.) exit 
+.) variants
+.) staggering
+.) sequencing 
+.) scroll animation (parallax effect)
+.) animating layout
+.) AnimatePresence
+.) creating custom animation hooks
