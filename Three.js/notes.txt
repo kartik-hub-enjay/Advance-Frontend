@@ -127,3 +127,14 @@
 
     renderer.render(scene, camera);
     }
+
+-> Orbit Controls:
+- Three.js, OrbitControls is a utility that lets the user interactively move the camera around a scene using the mouse or touch.
+- OrbitControls = allows you to rotate, zoom, and pan the camera around an object
+- With OrbitControls, users can:
+    Rotate → drag mouse to spin around object
+    Zoom → scroll to zoom in/out
+    Pan → move left/right/up/down
+-Important Note:
+    .)OrbitControls does NOT move objects
+    .)It moves the camera around the scene
