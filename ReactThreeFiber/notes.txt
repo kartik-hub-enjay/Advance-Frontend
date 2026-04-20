@@ -1,0 +1,8 @@
+-> What is “React Three Fiber”?
+-React Three Fiber (R3F) is a library that lets you build 3D graphics using React instead of writing raw Three.js code.
+
+-> Core Concepts:
+    <Canvas> → replaces renderer
+    <mesh> → object
+    <boxGeometry /> → shape
+    <meshStandardMaterial /> → look

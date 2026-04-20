@@ -205,7 +205,7 @@ There are several types of lights in Three.js, each serving a specific purpose i
 - Helpers: "Seeing" the Light
     .)Since lights are invisible, it can be frustrating to guess where they are pointing. Three.js provides Helpers to visualize them
 
-
+-> sketchfab for 3d models.
 
 ---> Left to learn in three.js :
 .> Shaders
