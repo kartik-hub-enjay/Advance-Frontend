@@ -138,3 +138,44 @@
 -Important Note:
     .)OrbitControls does NOT move objects
     .)It moves the camera around the scene
+
+-> Geometry:
+- In 3D graphics (like in Three.js ), Geometry defines the shape or structure of an object.
+- Geometry is made up of:
+    Vertices → points in space
+    Edges → lines connecting points
+    Faces → surfaces (triangles)
+    .) Together, they form a 3D shap
+- Geometry only defines shape
+- It is not visible until combined with a material
+
+-> Materials:
+- In 3D graphics (like in Three.js ), Materials define how an object looks on the surface.
+- Material = the appearance (color, texture, light behavior) of an object
+-Types of Materials (Important)
+    1. Basic Material
+    .)No lighting effect
+    .)Always looks same
+    2. Standard Material
+    .)Realistic lighting
+    .)Supports shadows
+    3. Phong Material
+    .)Shiny surface
+    .)Reflects light
+
+-What Materials Control
+    Color
+    Texture (images)
+    Shininess
+    Light reflection
+    Transparency
+
+-> Textures:
+- In 3D graphics (like in Three.js ), Textures are images applied to the surface of an object to make it look more realistic or detailed.
+- Types of Textures (Advanced but Useful)
+    .)Color Map → basic image
+    .)Normal Map → fake surface details
+    .)Roughness Map → smooth/rough surface
+    .)Metalness Map → metallic look
+---> Left to learn in three.js :
+.> Shadres
