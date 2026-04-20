@@ -1,0 +1,38 @@
+-> What is WebGL ?
+- WebGL (Web Graphics Library) is a JavaScript API that allows you to render 3D and 2D graphics directly in a web browser without needing any plugins.
+- WebGL lets you use your GPU (graphics card) to draw graphics on a webpage using the <canvas> element.
+
+-> What is Three.js?
+- Three.js is a JavaScript library that makes it easy to create 3D graphics in the browser using WebGL.
+- Three.js = an easy layer on top of WebGL.
+- Instead of writing complex WebGL code, you use simple JavaScript to create 3D scenes.
+- When working with Three.js, you always deal with these 3 things:
+    Scene → The world (everything exists here)
+    Camera → What the user sees
+    Renderer → Displays the scene on screen
+
+-> Canvas:
+- Canvas is an HTML element used to draw graphics (2D or 3D) directly on a web page using JavaScript.
+
+-> Scene:
+- In 3D graphics (especially in Three.js ), a Scene is the main container that holds everything you want to display.
+- Scene = the virtual world where all objects exist
+-Think of a movie:
+    Actors → Objects (cube, sphere, models)
+    Lights → Lighting
+    Camera → Viewpoint
+    Scene → The entire stage where everything happens
+    What Does a Scene Contain?
+
+- A scene can include:
+    3D objects (meshes, models)
+    Lights (for brightness and shadows)
+    Cameras (to view the scene)
+    Animations
+- In Three.js, these 3 always work together:
+    Scene → What exists
+    Camera → What you see
+    Renderer → Displays it
+    .)The renderer shows the scene through the camera.
+
+    
