@@ -1,20 +1,10 @@
 
 const scene = new THREE.Scene()
 const camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
-// const light = new THREE.AmbientLight(0xfffff,0.5)
-// 1. Create a light (Color, Intensity)
-const light = new THREE.DirectionalLight(0xffffff, 1);
 
-// 2. Position it
-light.position.set(5, 5, 5);
-
-// 3. Add it to the scene
-scene.add(light);
-scene.add(light)
-const helper = new THREE.DirectionalLightHelper(light, 5);
-scene.add(helper);
 const geometry = new THREE.BoxGeometry(1,1,1);
-const material = new THREE.MeshStandardMaterial({color:"red"})
+const texture = new THREE.TextureLoader().load('image.jpg');
+const material = new THREE.MeshBasicMaterial({ map: texture, wireframe: true })
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 camera.position.z = 5; //This moves the camera away from objects so you can see them

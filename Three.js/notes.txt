@@ -177,5 +177,35 @@
     .)Normal Map → fake surface details
     .)Roughness Map → smooth/rough surface
     .)Metalness Map → metallic look
+
+-> Lil GUI:
+- lil-gui is a small JavaScript library used to create a control panel (UI sliders, buttons, toggles) to interact with your code in real time.
+- lil-gui = a UI tool to control variables live (while your app is running)
+- When working with 3D (like in Three.js ), you often want to:
+    Change colors 
+    Adjust rotation 
+    Modify light intensity 
+    Tune animations
+-Instead of editing code again and again, lil-gui lets you control everything with sliders
+
+-> Lights:
+- In Three.js, Lights are what transform a flat, 2D-looking shape into a 3D object with depth, shadows, and contours. Without light, your scene will either be pitch black or—if you are using a MeshBasicMaterial—flat and devoid of shading.
+- To use lights, you need two things: a Light source and a Material that reacts to light (like MeshStandardMaterial or MeshPhongMaterial).
+- Common Light Types
+There are several types of lights in Three.js, each serving a specific purpose in a 3D environment:
+.) https://docs.google.com/document/d/13WF_JggZ5yT2HN7rHNu9Iot5zy7uu54QEyguAbryVzQ/edit?usp=sharing
+- Lighting Theory: The "Three-Point" Setup
+    .)For professional-looking scenes, developers often use a "Three-Point Lighting" setup. This involves a Key Light (main source), a Fill Light (to soften shadows), and a Back Light (to create a rim effect and separate the object from the background).
+- Working with Shadows
+    .)Shadows are computationally "expensive," so they are disabled by default. To see shadows, you must follow a three-step checklist:
+        Enable the Renderer: renderer.shadowMap.enabled = true;
+        Enable the Light: light.castShadow = true;
+        Enable the Objects: The object must cast it (mesh.castShadow = true), and the floor must receive it (floor.receiveShadow = true).
+
+- Helpers: "Seeing" the Light
+    .)Since lights are invisible, it can be frustrating to guess where they are pointing. Three.js provides Helpers to visualize them
+
+
+
 ---> Left to learn in three.js :
-.> Shadres
+.> Shaders
