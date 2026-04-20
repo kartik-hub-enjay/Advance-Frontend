@@ -35,4 +35,95 @@
     Renderer → Displays it
     .)The renderer shows the scene through the camera.
 
-    
+-> Camera:
+- In 3D graphics (like in Three.js ), a Camera defines what part of the scene is visible on the screen.
+- Camera = the viewer’s eyes in a 3D world
+- Think of shooting a movie:
+    Scene → entire set
+    Camera → what angle you see
+    Screen → final output
+    .)Change camera → you see a different view
+-Types of Cameras
+    1. Perspective Camera (Most Used):
+        .)Works like human eyes
+        .)Objects far away look smaller
+        .)Used in games, websites, real-world views
+    2. Orthographic Camera
+        .)No perspective effect
+        .)Objects stay same size
+        .)Used in 2D games, UI, CAD apps
+- Position → Where camera is
+- Rotation → Where it is looking
+- Field of View (FOV) → How wide the view is
+
+-> Rotation:
+- Rotation = turning an object around an axis
+- Objects rotate around 3 axes:
+    X-axis → up/down tilt
+    Y-axis → left/right spin
+    Z-axis → clockwise/anticlockwise
+
+- Visual Understanding
+    Rotate X → like nodding head
+    Rotate Y → like shaking head
+    Rotate Z → like rotating a wheel
+
+- Scaling :
+- Scaling = changing the size of an object
+- Scaling also works on axes:
+    X → width
+    Y → height
+    Z → depth
+
+-> Mesh:
+- In 3D graphics (like in Three.js ), a Mesh is the actual visible 3D object you see on the screen.
+- Mesh = Geometry + Material 
+- A mesh is made of 2 parts:
+    1. Geometry:
+        Defines the shape
+        Example: cube, sphere, plane
+    2. Material:
+        Defines the appearance
+        Color, texture, light effect
+
+
+-> Renderer :
+- In the world of Three.js, the Renderer is essentially the engine’s "artist." It takes all the mathematical data you’ve created—your 3D objects, the lights, and the camera’s perspective—and does the hard work of drawing those pixels onto your 2D screen.
+
+- Think of it as the final step in the pipeline: you provide the scene (the stage) and the camera (the eyes), and the renderer produces the image.
+
+- Most Three.js projects use the WebGLRenderer. This specifically utilizes the browser's WebGL API to harness the power of the user's GPU (Graphics Card). This is why 3D on the web can run at high frame rates (like 60 FPS) even with complex geometry.
+
+-> requestAnimationFrame:
+- In Three.js, requestAnimationFrame (RAF) is the heartbeat of your application. While it is technically a native Web API provided by the browser, it is essential for Three.js because it creates the Render Loop that makes motion possible.
+
+- Without it, your 3D scene would be a static snapshot. With it, you can move objects, update physics, and see changes in real-time.
+
+- Why use it instead of setInterval?
+    .)In the early days of web development, people used setInterval(code, 16) to create animations.  However, requestAnimationFrame is superior for three main reasons:
+
+    .)Sync with Refresh Rate: It matches the frame rate of your monitor (usually 60Hz or 144Hz), resulting in buttery-smooth motion.
+
+    .)Battery & Performance: If you switch tabs or minimize the browser, RAF pauses automatically. This prevents your GPU from working overtime on a scene the user can't even see.
+
+    .)Frame Efficiency: The browser waits until the right moment before the next "repaint" to execute your code, reducing stuttering (jank).
+
+- Handling Different Frame Rates
+    One common "gotcha" with requestAnimationFrame is that it runs as fast as the monitor allows. If a user has a 144Hz monitor, your cube will spin much faster than for a user on a 60Hz monitor.
+
+    To fix this, developers use a Clock to ensure animations are "frame-rate independent."
+
+    JavaScript
+    const clock = new THREE.Clock();
+
+    function animate() {
+    requestAnimationFrame(animate);
+
+    // Get the time elapsed since the last frame
+    const delta = clock.getDelta(); 
+
+    // Move 1 unit per second, regardless of FPS
+    mesh.position.x += 1 * delta; 
+
+    renderer.render(scene, camera);
+    }
